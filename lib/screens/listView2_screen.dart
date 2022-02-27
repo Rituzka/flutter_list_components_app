@@ -14,10 +14,14 @@ class ListView2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('ListView 2'),
+          title: const Text('ListView 2'),
         ),
         body: ListView.separated(
-            itemBuilder: (context, index) => Text(options[index]),
+            itemBuilder: (context, index) => ListTile(
+                  leading: const Icon(Icons.account_balance_wallet),
+                  title: Text(options[index]),
+                  trailing: const Icon(Icons.arrow_forward_ios),
+                ),
             separatorBuilder: (_, __) => const Divider(),
             itemCount: options.length));
   }
