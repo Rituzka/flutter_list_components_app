@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_list_components_app/screens/screens.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,7 +19,9 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) => ListTile(
           leading: const Icon(Icons.abc),
           title: const Text('Titulo'),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, 'alert');
+          },
         ),
         separatorBuilder: (_, __) => const Divider(),
       ),
