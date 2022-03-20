@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_list_components_app/themes/app_theme.dart';
 
 class CustomCardType2 extends StatelessWidget {
-  const CustomCardType2({Key? key}) : super(key: key);
+  final String imageURL;
+  final String? nameImage;
+
+  const CustomCardType2({Key? key, required this.imageURL, this.nameImage})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,19 +17,20 @@ class CustomCardType2 extends StatelessWidget {
         shadowColor: AppTheme.primary.withOpacity(0.6),
         child: Column(
           children: [
-            const FadeInImage(
-              placeholder: AssetImage('assets/jar-loading.gif'),
-              image: NetworkImage(
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAFhC_FzQvr7mNZYVJC5pZo7PgFDYuoOwXtw&usqp=CAU"),
+            FadeInImage(
+              placeholder: const AssetImage('assets/jar-loading.gif'),
+              image: NetworkImage(imageURL),
               width: double.infinity,
               height: 230,
               fit: BoxFit.cover,
-              fadeInDuration: Duration(milliseconds: 300),
+              fadeInDuration: const Duration(milliseconds: 300),
             ),
-            Container(
-                alignment: AlignmentDirectional.centerEnd,
-                padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-                child: const Text("Star Wars landscape"))
+            if (nameImage != null)
+              Container(
+                  alignment: AlignmentDirectional.centerEnd,
+                  padding:
+                      const EdgeInsets.only(right: 20, top: 10, bottom: 10),
+                  child: Text(nameImage!))
           ],
         ));
   }
