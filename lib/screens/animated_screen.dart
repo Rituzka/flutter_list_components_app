@@ -31,12 +31,12 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       appBar: AppBar(title: const Text('Animated Container')),
       body: Center(
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 400),
-          curve: Curves.elasticOut,
-          width: _width,
-          height: _height,
-          decoration: BoxDecoration(color: _color, borderRadius: _borderRadius),
-        ),
+            duration: const Duration(milliseconds: 400),
+            curve: Curves.easeOutCubic,
+            width: _width,
+            height: _height,
+            decoration:
+                BoxDecoration(color: _color, borderRadius: _borderRadius)),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.play_circle_outline, size: 40),

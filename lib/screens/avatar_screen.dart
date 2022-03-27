@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_list_components_app/themes/app_theme.dart';
 
 class AvatarScreen extends StatelessWidget {
   const AvatarScreen({Key? key}) : super(key: key);
