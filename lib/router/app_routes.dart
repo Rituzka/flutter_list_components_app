@@ -41,7 +41,12 @@ class AppRoutes {
         route: 'animation',
         name: 'Animated Screen',
         screen: const AnimatedScreen(),
-        icon: Icons.play_circle_fill_outlined)
+        icon: Icons.play_circle_fill_outlined),
+    MenuOption(
+        route: 'slider',
+        name: 'Slider & Checks',
+        screen: const SliderScreen(),
+        icon: Icons.slideshow)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoute() {

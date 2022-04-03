@@ -7,3 +7,4 @@ export 'package:flutter_list_components_app/screens/avatar_screen.dart';
 export 'package:flutter_list_components_app/screens/animated_screen.dart';
 export 'package:flutter_list_components_app/screens/input_screen.dart';
 export 'package:flutter_list_components_app/widgets/custom_input_field.dart';
+export 'package:flutter_list_components_app/screens/slider_screen.dart';
