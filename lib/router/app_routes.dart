@@ -8,12 +8,12 @@ class AppRoutes {
 
   static final menuOptions = <MenuOption>[
     MenuOption(
-        route: 'listView1',
+        route: 'listview1',
         name: 'List View1 Screen',
         screen: const ListView1Screen(),
         icon: Icons.list_alt),
     MenuOption(
-        route: 'listView2',
+        route: 'listview2',
         name: 'List View2 Screen ',
         screen: const ListView2Screen(),
         icon: Icons.list_rounded),
@@ -46,7 +46,12 @@ class AppRoutes {
         route: 'slider',
         name: 'Slider & Checks',
         screen: const SliderScreen(),
-        icon: Icons.slideshow)
+        icon: Icons.slideshow),
+    MenuOption(
+        route: 'listviewbuilder',
+        name: 'InfiniteScroll & Pull to refresh',
+        screen: const ListViewBuilderScreen(),
+        icon: Icons.build_circle_outlined)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoute() {
